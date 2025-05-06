@@ -14,6 +14,6 @@ steps:
     displayName: 'run echo command'
   - script: mvn clean install
     displayName: 'build maven'
-  - script: java -jar maven-0.0.1-SNAPSHOT.jar
+  - script: java -jar target/maven-0.0.1-SNAPSHOT.jar
     displayName: 'run jar file'
   
