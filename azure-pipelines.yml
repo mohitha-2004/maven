@@ -1,0 +1,19 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- master
+
+pool:
+  name: Default
+
+steps:
+  - script: echo hello,hbhjj
+    displayName: 'run echo command'
+  - script: mvn clean install
+    displayName: 'build maven'
+  - script: java -jar maven-0.0.1-SNAPSHOT.jar
+    displayName: 'run jar file'
+  
